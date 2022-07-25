@@ -14,4 +14,5 @@ console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`);
 
 
 
-// completes in about 38.05 seconds
+// completes in about 2 seconds
+// Big O of n is O(n)
