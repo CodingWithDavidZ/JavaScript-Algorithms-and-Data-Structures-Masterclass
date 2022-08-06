@@ -11,3 +11,20 @@ console.log("Object.entries", Object.entries(instructor));
 
 console.log("instructor.hasOwnProperty('firstName')", instructor.hasOwnProperty('firstName'));
 //This is Constant Time or O(1)
+
+
+
+fred
+console.log(`fred @ File-Objects.js Line-17`, fred);
+
+
+
+
+
+
+
+
+
+
+
+
