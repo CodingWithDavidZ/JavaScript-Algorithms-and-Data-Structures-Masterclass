@@ -14,11 +14,9 @@ console.log("instructor.hasOwnProperty('firstName')", instructor.hasOwnProperty(
 
 
 
-fred
-console.log(`fred @ File-Objects.js Line-17`, fred);
 
 
-
+//test
 
 
 
