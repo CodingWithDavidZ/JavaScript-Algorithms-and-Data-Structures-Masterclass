@@ -16,8 +16,6 @@ console.log("instructor.hasOwnProperty('firstName')", instructor.hasOwnProperty(
 
 
 
-//test
-
 
 
 
