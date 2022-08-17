@@ -20,11 +20,11 @@
 //input1: num1
 //input2: num2
 //output: sum
-//function: add2nums
+//function: add2Nums
 
-function add2nums(num1, num2) {
+function add2Nums(num1, num2) {
     let sum = num1 + num2;
     return sum;
 }
 
-console.log(add2nums(1, 2));
+console.log(add2Nums(1, 2));
