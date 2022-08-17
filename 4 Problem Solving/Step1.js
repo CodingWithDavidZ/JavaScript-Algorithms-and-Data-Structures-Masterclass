@@ -21,3 +21,10 @@
 //input2: num2
 //output: sum
 //function: add2nums
+
+function add2nums(num1, num2) {
+    let sum = num1 + num2;
+    return sum;
+}
+
+console.log(add2nums(1, 2));
