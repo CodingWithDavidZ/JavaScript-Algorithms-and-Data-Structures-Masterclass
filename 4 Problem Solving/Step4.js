@@ -9,7 +9,7 @@ function charCount(str) {
     let result = {}
 	//loop over string, for each character...
     for(var i = 0; i < str.length; i++){
-        let char = str[i]
+        let char = str[i].toLowerCase()
         // if char is a number/letter AND is a key in object, add one to count
         if(result[char]> 0){
             result[char]++;
