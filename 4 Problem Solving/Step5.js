@@ -25,6 +25,19 @@ function charCount(str){
     }
     return obj;
 }
+//explaining the code in plain English step by step
+//the charCount function takes in a string and returns an object with keys that are lowercase alphanumeric characters in the string; values should be the count for those characters
+//the function takes in a string and assigns it to the variable str
+//the function creates an empty object and assigns it to the variable obj
+//the function loops over the string, for each character...
+//the function assigns the current character to the variable char
+//the function checks if the current character is a number/letter
+//the function checks if the current character is a key in the object
+//the function adds one to the count if the current character is a key in the object
+//the function adds the current character to the object and sets the count to one if the current character is not a key in the object
+//the function returns the object at the end
+
+
 
 
 console.log(`🧬 charCount("Hello") @ File-Step5.js Line-28 🧬`, charCount("Hello, World!"));
