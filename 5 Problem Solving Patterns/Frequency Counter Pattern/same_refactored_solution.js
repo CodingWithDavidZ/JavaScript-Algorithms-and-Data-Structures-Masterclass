@@ -8,10 +8,12 @@ function same(arr1, arr2) {
 	let frequencyCounter2 = {};
 	// loop through the first array and add the value to the object if it does not exist, otherwise increment the value
 	for (let val of arr1) {
+		// if the value does not exist, set it to 1, otherwise increment it
 		frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
 	}
 	// loop through the second array and add the value to the object if it does not exist, otherwise increment the value
 	for (let val of arr2) {
+		// if the value does not exist, set it to 1, otherwise increment it
 		frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
 	}
 	console.log(frequencyCounter1);
@@ -30,4 +32,4 @@ function same(arr1, arr2) {
 	return true;
 }
 
-same([1, 2, 3, 2], [9, 1, 4, 4]);
+same([1, 2, 2, 3], [9, 1, 4, 4]);
