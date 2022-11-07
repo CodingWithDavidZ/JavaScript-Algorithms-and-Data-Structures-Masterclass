@@ -65,3 +65,4 @@ function isAlphaNumeric(char) {
     }
     return true;
 }
+
