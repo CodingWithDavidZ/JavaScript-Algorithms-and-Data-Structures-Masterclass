@@ -1,5 +1,3 @@
-
-
 function same(arr1, arr2) {
 	// if the two arrays have different lengths, return false because they cannot be the same
 	if (arr1.length !== arr2.length) {
@@ -18,4 +16,7 @@ function same(arr1, arr2) {
 	return true;
 }
 
-same([1, 2, 3, 2], [9, 1, 4, 4]);
+var time1 = performance.now();
+same([1, 2, 2, 3], [9, 1, 4, 4]);
+var time2 = performance.now();
+console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`);
