@@ -39,10 +39,14 @@ function validAnagram(str1, str2){
         return true;
     }
 }
+
 var time1 = performance.now();
+
 validAnagram('study', 'dusty');
+validAnagram('hello', 'bye');
 validAnagram('trifluorochloromethane', 'chlorotrifluoromethane');
-validAnagram
+
 var time2 = performance.now();
 console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`);
+
 
