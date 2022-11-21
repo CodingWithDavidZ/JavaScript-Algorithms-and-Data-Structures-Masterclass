@@ -1,3 +1,5 @@
+// Instead of reiterating of the array each time we simply subtract the first element of the previous subarray and add the next element of the array to the previous subarray.
+
 function maxSubarraySum(arr, num) {
 	let maxSum = 0;
 	let tempSum = 0;
