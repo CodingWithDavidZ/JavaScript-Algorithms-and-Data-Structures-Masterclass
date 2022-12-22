@@ -54,3 +54,45 @@
 // Can You Solve This Problem:
 // 	• Yes
 // 		○ Do it
+
+function sameFrequency(num1, num2) {
+  
+  let num1Arr = num1.toString().split("");
+  let num2Arr = num2.toString().split("");
+ 
+  let num1Obj = {};
+  
+  if (num1Arr.length !== num2Arr.length) {
+    return false;
+  }
+
+  for (let i = 0; i < num1Arr.length; i++) {
+    // if the key exists then add 1 to the value if not then create the key and set the value to 1
+    if (num1Obj[num1Arr[i]]) {
+      num1Obj[num1Arr[i]] += 1;
+    } else {
+      num1Obj[num1Arr[i]] = 1;
+    }
+  }
+  
+  for (let i = 0; i < num2Arr.length; i++) {
+    if (num1Obj[num2Arr[i]] === undefined) {
+      return false;
+    } else {
+      num1Obj[num2Arr[i]] -= 1;
+    }
+  }
+  // if all the values are 0 then return true
+  for (let key in num1Obj) {
+    if (num1Obj[key] !== 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+sameFrequency(182, 281); // true
+sameFrequency(34, 14); // false
+sameFrequency(3589578, 5879385); // true
+sameFrequency(22, 222); // false
+
