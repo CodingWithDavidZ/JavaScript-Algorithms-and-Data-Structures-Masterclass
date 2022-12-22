@@ -70,6 +70,68 @@ function areThereDuplicates() {
         return false;
     }
 
+var Time1 = performance.now();
 areThereDuplicates(1, 2, 3) // false
 areThereDuplicates(1, 2, 2) // true
 areThereDuplicates('a', 'b', 'c', 'a') // true
+var Time2 = performance.now();
+console.log(`Time Elapsed: ${(Time2 - Time1) / 1000} seconds.`);
+
+// ========================================================
+
+//Instructor Solution (Frequency Counter):
+function areThereDuplicates2() {
+	let collection = {};
+	for (let val in arguments) {
+		collection[arguments[val]] = (collection[arguments[val]] || 0) + 1;
+	}
+	for (let key in collection) {
+		if (collection[key] > 1) return true;
+	}
+	return false;
+}
+
+var Time3 = performance.now();
+areThereDuplicates2(1, 2, 3); // false
+areThereDuplicates2(1, 2, 2); // true
+areThereDuplicates2('a', 'b', 'c', 'a'); // true
+var Time4 = performance.now();
+console.log(`Time Elapsed: ${(Time4 - Time3) / 1000} seconds.`);
+
+// ========================================================
+// Instructor Solution (Multiple Pointers):
+function areThereDuplicates3(...args) {
+	// Two pointers
+	args.sort((a, b) => a > b);
+	let start = 0;
+	let next = 1;
+	while (next < args.length) {
+		if (args[start] === args[next]) {
+			return true;
+		}
+		start++;
+		next++;
+	}
+	return false;
+}
+
+var Time5 = performance.now();
+areThereDuplicates3(1, 2, 3); // false
+areThereDuplicates3(1, 2, 2); // true
+areThereDuplicates3('a', 'b', 'c', 'a'); // true
+var Time6 = performance.now();
+console.log(`Time Elapsed: ${(Time2 - Time1) / 1000} seconds.`);
+
+// ========================================================
+
+// Instructor Solution (One Liner):
+function areThereDuplicates4() {
+    return new Set(arguments).size !== arguments.length;
+}
+
+var Time7 = performance.now();
+areThereDuplicates4(1, 2, 3); // false
+areThereDuplicates4(1, 2, 2); // true
+areThereDuplicates4('a', 'b', 'c', 'a'); // true
+var Time8 = performance.now();
+console.log(`Time Elapsed: ${(Time8 - Time7) / 1000} seconds.`);
